@@ -3,147 +3,162 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>NU Quantum Competition Lab Setup Guide</title>
-  <meta name="viewport" content="width=900, initial-scale=1">
+  <title>NU Quantum Computing Summer School</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header class="nu-header">
     <div class="nu-header-content">
-      <img src="Nile_University_Logo.jpg" alt="Nile University Logo" class="nu-logo">
-      <span class="nu-title">Nile University Lab Setup</span>
+      <img src="assets/logos/Nile_University_Logo.jpg" alt="Nile University Logo" class="nu-logo">
+      <span class="nu-title">Quantum Computing Summer School</span>
       <nav>
-        <a href="https://itcs.nu.edu.eg/Air_Quality_Quantum_Computing" class="nu-home-btn" target="_blank" rel="noopener">Home</a>
-        <a href="#vscode">VS Code</a>
-        <a href="#anaconda">Anaconda</a>
-        <a href="#scripts">Setup Scripts</a>
+        <a href="#lectures">Lectures</a>
+        <a href="#labs">Labs</a>
+        <a href="#resources">Resources</a>
+        <a href="#schedule">Schedule</a>
+        <a href="setup.html" class="setup-btn">Setup Guide</a>
       </nav>
     </div>
   </header>
 
   <main class="container">
-    <h1>NU Quantum Competition Lab Setup Guide</h1>
+    <h1>NU Quantum Computing Summer School</h1>
     <p class="intro">
-      Welcome! This page will guide you through setting up your programming environment for the Air Quality Quantum Computing course. Please follow each step in order.
+        Welcome to the Quantum Computing Summer School at Nile University. Access all course materials, recordings, and resources below.
     </p>
 
-    <section id="vscode">
-      <h2>1. Install Visual Studio Code</h2>
-      <p>
-        Visual Studio Code (VS Code) is a free, powerful code editor. You’ll use it for all your Python and Jupyter work.
-      </p>
-      <a class="button" href="https://code.visualstudio.com/" target="_blank" rel="noopener">Download VS Code</a>
-      <div class="instructions">
-        <ol>
-          <li>Download and install VS Code for your operating system.</li>
-          <li>
-            <b>Open VS Code:</b>
-            <ul>
-              <li><b>Windows:</b> Click the Start menu, type <i>Visual Studio Code</i>, and press Enter.</li>
-              <li><b>Linux/macOS:</b> Find "Visual Studio Code" in your applications menu, or run <code>code</code> in your terminal if added to PATH.</li>
-            </ul>
-          </li>
-          <li>
-            <b>Install Extensions:</b>
-            <ul>
-              <li>Click the <b>Extensions</b> icon (<span class="icon">🧩</span>) on the left sidebar or press <b>Ctrl+Shift+X</b> (<b>Cmd+Shift+X</b> on Mac).</li>
-              <li>Search for <b>Python</b> (by Microsoft) and click <b>Install</b>.</li>
-              <li>Search for <b>Jupyter</b> (by Microsoft) and click <b>Install</b>.</li>
-            </ul>
-          </li>
-        </ol>
-      </div>
-      <div class="img-row">
-        <img src="vscode_extensions.png" alt="VS Code Extensions Install Example" class="extension-img">
+    <section id="schedule">
+        <h2>Course Schedule</h2>
+        <table class="schedule-table">
+            <thead>
+                <tr>
+                    <th>Week</th>
+                    <th>Date</th>
+                    <th>Topic</th>
+                    <th>Type</th>
+                    <th>Materials</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Week 1</td>
+                    <td>July 1, 2025</td>
+                    <td>Introduction to Quantum Computing</td>
+                    <td>Lecture</td>
+                    <td>
+                        <a href="lectures/week1/slides.pdf"><span class="icon">📑</span></a>
+                        <a href="lectures/week1/recording.mp4"><span class="icon">🎥</span></a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Week 1</td>
+                    <td>July 3, 2025</td>
+                    <td>Environment Setup</td>
+                    <td>Lab</td>
+                    <td>
+                        <a href="labs/lab1/setup.html"><span class="icon">🔧</span></a>
+                    </td>
+                </tr>
+                <!-- Add more schedule rows as needed -->
+            </tbody>
+        </table>
+    </section>
+
+    <section id="lectures">
+        <h2>Lecture Materials</h2>
+        <div class="content-grid">
+            <article class="course-item">
+                <h3>Week 1: Introduction to Quantum Computing</h3>
+                <div class="material-list">
+                    <a href="lectures/week1/slides.pdf" class="material-link">
+                        <span class="icon">📑</span> Lecture Slides
+                    </a>
+                    <a href="lectures/week1/recording.mp4" class="material-link">
+                        <span class="icon">🎥</span> Lecture Recording
+                    </a>
+                    <a href="lectures/week1/notes.pdf" class="material-link">
+                        <span class="icon">📝</span> Lecture Notes
+                    </a>
+                </div>
+            </article>
+            <!-- Add more lecture weeks here -->
+        </div>
+    </section>
+
+    <section id="labs">
+        <h2>Laboratory Sessions</h2>
+        <div class="content-grid">
+            <article class="course-item">
+                <h3>Lab 1: Environment Setup</h3>
+                <p>Set up your quantum computing environment with all necessary tools and packages.</p>
+                <div class="material-list">
+                    <a href="labs/lab1/setup.html" class="material-link">
+                        <span class="icon">📋</span> Setup Instructions
+                    </a>
+                    <a href="scripts/create_env_windows.bat" class="material-link" id="download-windows-script">
+                        <span class="icon">⊞</span> Windows Setup Script
+                    </a>
+                    <a href="scripts/create_env_linux.sh" class="material-link" id="download-linux-script">
+                        <span class="icon">🐧</span> Linux Setup Script
+                    </a>
+                </div>
+            </article>
+            <!-- Add more labs here -->
+        </div>
+    </section>
+
+    <section id="resources">
+      <h2>Additional Resources</h2>
+      <div class="resource-grid">
+        <div class="resource-category">
+          <h3>Essential Reading</h3>
+          <ul class="resource-list">
+            <li><a href="#"><span class="icon">📚</span> Quantum Computing Fundamentals</a></li>
+            <li><a href="#"><span class="icon">📖</span> Qiskit Textbook</a></li>
+          </ul>
+        </div>
+        <div class="resource-category">
+          <h3>Tools & Software</h3>
+          <ul class="resource-list">
+            <li><a href="setup.html"><span class="icon">🔧</span> Environment Setup Guide</a></li>
+            <li><a href="#"><span class="icon">💻</span> Online Quantum Simulator</a></li>
+          </ul>
+        </div>
       </div>
     </section>
 
-    <section id="anaconda">
-      <h2>2. Install Anaconda (or Miniconda)</h2>
-      <p>
-        You need Anaconda or Miniconda to manage Python environments and packages.
-      </p>
-      <div class="platform-grid">
-        <div>
-          <h3>Windows</h3>
-          <a class="button" href="https://www.anaconda.com/download" target="_blank" rel="noopener">Anaconda for Windows</a>
-          <a class="button secondary" href="https://docs.conda.io/en/latest/miniconda.html" target="_blank" rel="noopener">Miniconda for Windows</a>
-        </div>
-        <div>
-          <h3>Linux / macOS</h3>
-          <a class="button" href="https://www.anaconda.com/download" target="_blank" rel="noopener">Anaconda for Linux/macOS</a>
-          <a class="button secondary" href="https://docs.conda.io/en/latest/miniconda.html" target="_blank" rel="noopener">Miniconda for Linux/macOS</a>
-        </div>
-      </div>
-      <div class="instructions">
-        <ol>
-          <li>Download the installer for your platform.</li>
-          <li>Follow the installation instructions.</li>
-          <li>
-            <b>Windows:</b> Tick “Add Anaconda to my PATH environment variable” during installation, or run <code>conda init</code> after.
-          </li>
-          <li>Restart your terminal or Anaconda Prompt after installation.</li>
-        </ol>
-      </div>
-      <div class="callout warning">
-        <b>Note:</b> If you see "conda not found" errors later, try running from the Anaconda Prompt or restart your terminal after running <code>conda init</code>.
-      </div>
-    </section>
-
-    <section id="scripts">
-      <h2>3. Download and Run the Environment Setup Script</h2>
-      <div class="platform-grid">
-        <div>
-          <h3>Windows</h3>
-            <a id="download-windows-script" class="button" href="#" rel="noopener">Download Windows script</a>
-          <ol>
-            <li>Download the <b>Windows setup script</b> from the link provided by your instructor.</li>
-            <li>If needed, edit the script to add or change dependencies.</li>
-            <li>Double-click the script to run it.</li>
-            <li>
-              If you see <b>"conda is not recognized"</b> error:
-              <ul>
-                <li>Open <b>Anaconda Prompt</b> (not regular Command Prompt).</li>
-                <li>Navigate to the script folder and run:<br>
-                  <code>create_env_windows.bat</code>
-                </li>
-              </ul>
-            </li>
-          </ol>
-        </div>
-        <div>
-          <h3>Linux / macOS</h3>
-            <a id="download-linux-script" class="button" href="#" rel="noopener">Download Linux script</a>
-          <ol>
-            <li>Download the <b>Linux/macOS setup script</b> from the link provided by your instructor.</li>
-            <li>Open a terminal in the script’s folder.</li>
-            <li>Make the script executable:<br>
-              <code>chmod +x create_env_linux.sh</code>
-            </li>
-            <li>Run the script:<br>
-              <code>./create_env_linux.sh</code>
-            </li>
-            <li>Follow any prompts to complete the setup.</li>
-          </ol>
-        </div>
-      </div>
-      <div class="callout info">
-        <b>Tip:</b> If you get a “Permission denied” error, make sure you ran <code>chmod +x create_env_linux.sh</code> first.
-      </div>
-    </section>
-
-    <section id="help">
-      <h2>Troubleshooting &amp; Help</h2>
-      <ul>
-        <li><b>Conda not found:</b> Ensure Anaconda/Miniconda is installed and your terminal is restarted.</li>
-        <li><b>Permission denied (Linux/macOS):</b> Run <code>chmod +x create_env_linux.sh</code> before executing.</li>
-        <li>Still stuck? Contact the technical team!.</li>
-      </ul>
+    <section id="schedule">
+      <h2>Course Schedule</h2>
+      <table class="schedule-table">
+        <thead>
+          <tr>
+            <th>Day</th>
+            <th>Date</th>
+            <th>Topic</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Week 1</td>
+            <td>July 1, 2025</td>
+            <td>Introduction to Quantum Computing</td>
+            <td>Lecture</td>
+          </tr>
+          <!-- Add more schedule rows -->
+        </tbody>
+      </table>
     </section>
   </main>
 
   <footer>
-    © 2025 Nile University — Course Lab Setup &nbsp;|&nbsp; <a href="mailto:staff@nu.edu.eg">Contact Staff</a>
+    <div class="footer-content">
+      <p>© 2025 Nile University — Quantum Computing Summer School</p>
+      <nav class="footer-links">
+        <a href="mailto:KEltohamy@nu.edu.eg">Contact</a>
+      </nav>
+    </div>
   </footer>
   <script src="app.js"></script>
 </body>
