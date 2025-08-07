@@ -17,47 +17,47 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 
 
-document.getElementById('download-linux-script').addEventListener('click', function(e) {
-  e.preventDefault();
-  fetch('https://raw.githubusercontent.com/quantum-summer-school/quantum-summer-school.github.io/refs/heads/main/scripts/create_env_linux.sh')
-    .then(response => {
-      if (!response.ok) throw new Error('Network response was not ok');
-      return response.blob();
-    })
-    .then(blob => {
-      const url = window.URL.createObjectURL(blob);
-      const a = document.createElement('a');
-      a.style.display = 'none';
-      a.href = url;
-      a.download = 'create_env_linux.sh';
-      document.body.appendChild(a);
-      a.click();
-      window.URL.revokeObjectURL(url);
-      document.body.removeChild(a);
-    })
-    .catch(() => alert('Failed to download file. Please try again later.'));
-});
+// document.getElementById('download-linux-script').addEventListener('click', function(e) {
+//   e.preventDefault();
+//   fetch('https://raw.githubusercontent.com/quantum-summer-school/quantum-summer-school.github.io/refs/heads/main/scripts/create_env_linux.sh')
+//     .then(response => {
+//       if (!response.ok) throw new Error('Network response was not ok');
+//       return response.blob();
+//     })
+//     .then(blob => {
+//       const url = window.URL.createObjectURL(blob);
+//       const a = document.createElement('a');
+//       a.style.display = 'none';
+//       a.href = url;
+//       a.download = 'create_env_linux.sh';
+//       document.body.appendChild(a);
+//       a.click();
+//       window.URL.revokeObjectURL(url);
+//       document.body.removeChild(a);
+//     })
+//     .catch(() => alert('Failed to download file. Please try again later.'));
+// });
 
-document.getElementById('download-windows-script').addEventListener('click', function(e) {
-  e.preventDefault();
-  fetch('https://raw.githubusercontent.com/quantum-summer-school/quantum-summer-school.github.io/refs/heads/main/scripts/create_env_windows.bat')
-    .then(response => {
-      if (!response.ok) throw new Error('Network response was not ok');
-      return response.blob();
-    })
-    .then(blob => {
-      const url = window.URL.createObjectURL(blob);
-      const a = document.createElement('a');
-      a.style.display = 'none';
-      a.href = url;
-      a.download = 'create_env_windows.bat';
-      document.body.appendChild(a);
-      a.click();
-      window.URL.revokeObjectURL(url);
-      document.body.removeChild(a);
-    })
-    .catch(() => alert('Failed to download file. Please try again later.'));
-});
+// document.getElementById('download-windows-script').addEventListener('click', function(e) {
+//   e.preventDefault();
+//   fetch('https://raw.githubusercontent.com/quantum-summer-school/quantum-summer-school.github.io/refs/heads/main/scripts/create_env_windows.bat')
+//     .then(response => {
+//       if (!response.ok) throw new Error('Network response was not ok');
+//       return response.blob();
+//     })
+//     .then(blob => {
+//       const url = window.URL.createObjectURL(blob);
+//       const a = document.createElement('a');
+//       a.style.display = 'none';
+//       a.href = url;
+//       a.download = 'create_env_windows.bat';
+//       document.body.appendChild(a);
+//       a.click();
+//       window.URL.revokeObjectURL(url);
+//       document.body.removeChild(a);
+//     })
+//     .catch(() => alert('Failed to download file. Please try again later.'));
+// });
 
   // Highlight active nav link on scroll
   const sections = Array.from(document.querySelectorAll('main section'));

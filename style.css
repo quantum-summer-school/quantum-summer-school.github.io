@@ -10,7 +10,7 @@ body {
   background: #005BAB;
   height: 56px;
   width: 100%;
-  box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
   display: flex;
   align-items: center;
   position: fixed;
@@ -67,12 +67,13 @@ body {
 }
 
 .container {
-  max-width: 900px;
+  max-width: 1200px;
+  width: 95%;
   margin: 85px auto 0 auto;
+  padding: clamp(16px, 4vw, 36px);
   background: #fff;
   border-radius: 8px;
-  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
-  padding: 36px 32px 40px 32px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
 }
 
 h1 {
@@ -113,17 +114,22 @@ h3 {
   border: none;
   cursor: pointer;
 }
-.button:hover, .button:focus {
+
+.button:hover,
+.button:focus {
   background: #003d7a;
   color: #fff;
   outline: none;
 }
+
 .button.secondary {
   background: #e4e8ef;
   color: #005BAB;
   border: 1px solid #b7c9e2;
 }
-.button.secondary:hover, .button.secondary:focus {
+
+.button.secondary:hover,
+.button.secondary:focus {
   background: #c7d6ea;
   color: #003d7a;
 }
@@ -154,12 +160,13 @@ h3 {
   margin: 18px 0 18px 0;
   flex-wrap: wrap;
 }
-.platform-grid > div {
+
+.platform-grid>div {
   flex: 1 1 320px;
   background: #f9fbfd;
   border-radius: 6px;
   padding: 18px 18px 10px 18px;
-  box-shadow: 0 1px 4px rgba(0,0,0,0.03);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.03);
   min-width: 290px;
 }
 
@@ -169,10 +176,12 @@ h3 {
   margin: 18px 0;
   font-size: 1em;
 }
+
 .callout.warning {
   background: #fffbe5;
   border-left: 5px solid #ffd700;
 }
+
 .callout.info {
   background: #e5f2ff;
   border-left: 5px solid #005BAB;
@@ -195,11 +204,12 @@ code {
   flex-wrap: wrap;
   justify-content: flex-start;
 }
+
 .extension-img {
   max-width: 420px;
   width: 100%;
   border-radius: 7px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
   border: 1px solid #e0e6f0;
   margin-bottom: 12px;
 }
@@ -217,20 +227,16 @@ footer {
 /* New Components */
 .content-grid {
   display: grid;
-  gap: 2rem;
-  margin: 2rem 0;
+  gap: 0rem;  /* Reduced from 2rem or 1.5rem */
+  margin: 1.5rem 0;
 }
 
 .course-item {
-  background: #ffffff;
+  background: white;
   border-radius: 8px;
-  padding: 1.5rem;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-  transition: transform 0.2s ease;
-}
-
-.course-item:hover {
-  transform: translateY(-2px);
+  padding: 1.25rem;  /* Slightly reduced padding */
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  border: 1px solid #e5e9f2;
 }
 
 .material-list {
@@ -274,7 +280,7 @@ footer {
   background: #ffffff;
   padding: 1.5rem;
   border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .resource-list {
@@ -288,76 +294,241 @@ footer {
 
 .schedule-table {
   width: 100%;
-  border-collapse: collapse;
+  border-collapse: separate;
+  border-spacing: 0;
   margin: 2rem 0;
-  background: #ffffff;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  font-size: clamp(0.8rem, 1.5vw, 0.95rem);
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
 }
 
 .schedule-table th,
 .schedule-table td {
-  padding: 1rem;
+  padding: clamp(0.5rem, 1vw, 1rem);
   border: 1px solid #dee2e6;
+  vertical-align: top;
+}
+
+.schedule-table th {
+  background: #005BAB;
+  color: #fff;
+  font-weight: 600;
   text-align: left;
+  padding: 1rem;
+  border: none;
 }
 
-.schedule-table td .icon {
-  margin: 0 0.5rem;
-  text-decoration: none;
+.schedule-table th:first-child {
+  border-top-left-radius: 8px;
 }
 
-.back-btn {
-  display: inline-flex;
-  align-items: center;
-  padding: 0.5rem 1rem;
-  background: #f8f9fa;
-  border-radius: 4px;
-  text-decoration: none;
-  color: #333;
-  margin-right: 2rem;
+.schedule-table th:last-child {
+  border-top-right-radius: 8px;
 }
 
-.lab-instructions {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 2rem;
+.schedule-table td {
+  padding: 1rem;
+  border: 1px solid #e5e9f2;
+  border-left: none;
+  border-right: none;
+  vertical-align: top;
+  line-height: 1.5;
 }
 
-.setup-downloads {
-  display: flex;
-  gap: 1rem;
-  margin: 2rem 0;
+/* Style for topics */
+.schedule-table td:nth-child(3) {
+  color: #1a3d6d;
+  font-weight: 500;
 }
 
-.button {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  padding: 0.75rem 1.5rem;
-  background: #007bff;
-  color: white;
-  border-radius: 4px;
-  text-decoration: none;
-  transition: background-color 0.2s;
+/* Style for instructors and TAs */
+.schedule-table td:nth-child(4),
+.schedule-table td:nth-child(5) {
+  color: #405470;
 }
 
-.button:hover {
-  background: #0056b3;
+/* Style for activities */
+.schedule-table td:nth-child(6) {
+  color: #222;
+}
+
+/* Style for room numbers */
+.schedule-table td:nth-child(7) {
+  color: #005BAB;
+  font-weight: 500;
+  text-align: center;
+}
+
+.schedule-table tr:hover {
+  background-color: #f7fafc;
+}
+
+.schedule-table tr:last-child td:first-child {
+  border-bottom-left-radius: 8px;
+}
+
+.schedule-table tr:last-child td:last-child {
+  border-bottom-right-radius: 8px;
+}
+
+/* Define optimal column widths */
+.schedule-table th:nth-child(1),
+.schedule-table td:nth-child(1) {
+  width: 8%;
+  min-width: 90px;
+}
+
+.schedule-table th:nth-child(2),
+.schedule-table td:nth-child(2) {
+  width: 6%;
+  min-width: 70px;
+}
+
+.schedule-table th:nth-child(3),
+.schedule-table td:nth-child(3) {
+  width: 15%;
+  min-width: 120px;
+}
+
+.schedule-table th:nth-child(4),
+.schedule-table td:nth-child(4) {
+  width: 18%;
+  min-width: 150px;
+}
+
+.schedule-table th:nth-child(5),
+.schedule-table td:nth-child(5) {
+  width: 15%;
+  min-width: 120px;
+}
+
+.schedule-table th:nth-child(6),
+.schedule-table td:nth-child(6) {
+  width: 30%;
+  min-width: 200px;
+}
+
+.schedule-table th:nth-child(7),
+.schedule-table td:nth-child(7) {
+  width: 8%;
+  min-width: 80px;
+}
+
+/* Improved responsive design */
+@media (max-width: 1200px) {
+  .nu-header-content {
+    width: 95%;
+  }
+
+  .schedule-table {
+    display: block;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
 }
 
 @media (max-width: 1000px) {
+  .schedule-table thead {
+    position: sticky;
+    top: 56px;
+    z-index: 10;
+  }
+
+  .schedule-table tbody {
+    border-top: 2px solid #005BAB;
+  }
+
+  /* Adjust container padding for mobile */
   .container {
-    padding: 18px 8px 30px 8px;
+    border-radius: 0;
+    box-shadow: none;
   }
-  .platform-grid {
+}
+
+@media (max-width: 768px) {
+  .nu-header {
+    height: auto;
+    padding: 0.5rem 0;
+  }
+
+  .nu-header-content {
     flex-direction: column;
-    gap: 18px;
+    gap: 1rem;
+    padding: 0.5rem;
   }
-  .img-row {
+
+  .nu-header nav {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    width: 100%;
+  }
+
+  .platform-grid,
+  .resource-grid,
+  .content-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .material-list {
     flex-direction: column;
-    gap: 10px;
   }
-  .extension-img {
-    max-width: 95vw;
+
+  .button {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* Improved spacing for multiline content */
+.schedule-table td br {
+  content: "";
+  display: block;
+  margin: 0.35em 0;
+}
+
+/* Touch-friendly tap targets for mobile */
+@media (hover: none) {
+
+  .nu-header nav a,
+  .button,
+  .material-link {
+    padding: min(16px, 4vw);
+  }
+}
+
+.subsection {
+  margin: 1rem 0;  /* Reduced from 1.5rem */
+  padding: 1rem;  /* Slightly reduced padding */
+  background: #f8f9fa;
+  border-radius: 6px;
+  border-left: 3px solid #005BAB;
+}
+
+.subsection h4 {
+  color: #1a3d6d;
+  font-size: 1.1rem;
+  margin: 0 0 1rem 0;
+}
+
+.subsection .material-list {
+  margin-top: 0.75rem;
+}
+
+/* Adjust spacing between subsections */
+.subsection+.subsection {
+  margin-top: 0.75rem;  /* Reduced from 1rem */
+}
+
+/* Make subsections more compact on mobile */
+@media (max-width: 768px) {
+  .subsection {
+    padding: 0.75rem;
+    margin: 0.75rem 0;
+  }
+
+  .subsection h4 {
+    font-size: 1rem;
   }
 }
