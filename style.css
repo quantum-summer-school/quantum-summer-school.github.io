@@ -67,13 +67,21 @@ body {
 }
 
 .container {
-  max-width: 1200px;
-  width: 95%;
+  max-width: 1400px;  /* Increased from 1200px */
+  width: 98%;  /* Increased from 95% */
   margin: 85px auto 0 auto;
-  padding: clamp(16px, 4vw, 36px);
+  padding: 0;  /* Remove padding */
+  background: transparent;  /* Remove background */
+  box-shadow: none;  /* Remove shadow */
+}
+
+/* Style individual sections */
+main > section {
   background: #fff;
-  border-radius: 8px;
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+  border-radius: 12px;
+  padding: clamp(1.5rem, 4vw, 2.5rem);
+  margin-bottom: 2rem;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
 }
 
 h1 {
@@ -87,6 +95,14 @@ h2 {
   margin-top: 36px;
   margin-bottom: 12px;
   font-size: 1.4em;
+}
+
+main>section>h2 {
+  color: #005BAB;
+  font-size: 2rem;
+  margin: 0 0 1.5rem 0;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid #e5e9f2;
 }
 
 h3 {
@@ -227,39 +243,78 @@ footer {
 /* New Components */
 .content-grid {
   display: grid;
-  gap: 0rem;  /* Reduced from 2rem or 1.5rem */
+  grid-template-columns: 1fr;  /* Changed to single column */
+  gap: 1.5rem;
   margin: 1.5rem 0;
 }
 
 .course-item {
-  background: white;
+  background: #fff;
   border-radius: 8px;
-  padding: 1.25rem;  /* Slightly reduced padding */
-  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
-  border: 1px solid #e5e9f2;
+  padding: 1.5rem;
+  height: 100%;  /* Make all cards same height */
+  display: flex;
+  flex-direction: column;
 }
 
 .material-list {
+  display: flex;  /* Changed from grid to flex */
+  flex-direction: column;  /* Stack items vertically */
+  gap: 0.5rem;
+  margin-top: 0.75rem;
+}
+
+.material-list-group {
   display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-  margin-top: 1rem;
+  flex-direction: row;  /* Changed from column to row */
+  flex-wrap: wrap;  /* Allow wrapping to next line if needed */
+  align-items: center;
+  gap: 0.75rem;  /* Spacing between items */
+  margin-bottom: 1rem;
+}
+
+.material-list-group:last-child {
+  margin-bottom: 0;
 }
 
 .material-link {
-  display: flex;
+  display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  padding: 0.5rem 1rem;
+  padding: 0.6rem 1rem;
   background: #f5f5f5;
+  border: 1px solid #e5e9f2;
   border-radius: 4px;
+  transition: all 0.2s ease;
   text-decoration: none;
-  color: #333;
-  transition: background-color 0.2s ease;
+  color: #1a3d6d;
+  font-size: 0.9rem;
+  white-space: nowrap;
+  width: auto;
+  margin-right: 0.5rem;  /* Space between inline items */
 }
 
-.material-link:hover {
-  background: #e5e5e5;
+/* Remove margin from last item in group */
+.material-link:last-child {
+  margin-right: 0;
+}
+
+/* Adjust spacing between groups */
+.material-list-group + .material-list-group {
+  margin-top: 0.75rem;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .material-list-group {
+    flex-direction: column;  /* Stack vertically on mobile */
+    align-items: flex-start;
+  }
+  
+  .material-link {
+    margin-right: 0;  /* Remove horizontal margin on mobile */
+    width: 100%;  /* Full width on mobile */
+  }
 }
 
 .announcement-box {
@@ -272,8 +327,8 @@ footer {
 
 .resource-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));  /* Increased minmax width */
+  gap: 1.5rem;
 }
 
 .resource-category {
@@ -294,9 +349,9 @@ footer {
 
 .schedule-table {
   width: 100%;
+  margin: 1.5rem 0;
   border-collapse: separate;
   border-spacing: 0;
-  margin: 2rem 0;
   font-size: clamp(0.8rem, 1.5vw, 0.95rem);
   background: #fff;
   border-radius: 8px;
@@ -421,11 +476,11 @@ footer {
     width: 95%;
   }
 
-  .schedule-table {
-    display: block;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
+  .container {
+    width: 96%;
   }
+  
+  /* Remove the content-grid adjustment since it's now always 1fr */
 }
 
 @media (max-width: 1000px) {
@@ -479,6 +534,20 @@ footer {
     width: 100%;
     text-align: center;
   }
+
+  .container {
+    width: 100%;
+    margin-top: 70px;
+  }
+
+  main > section {
+    border-radius: 0;
+    margin-bottom: 1rem;
+  }
+  
+  main > section > h2 {
+    font-size: 1.5rem;
+  }
 }
 
 /* Improved spacing for multiline content */
@@ -499,11 +568,14 @@ footer {
 }
 
 .subsection {
-  margin: 1rem 0;  /* Reduced from 1.5rem */
-  padding: 1rem;  /* Slightly reduced padding */
+  margin: 1rem 0;
+  /* Reduced from 1.5rem */
+  padding: 1.25rem;
+  /* Slightly reduced padding */
   background: #f8f9fa;
-  border-radius: 6px;
-  border-left: 3px solid #005BAB;
+  border-radius: 8px;
+  border-left: 4px solid #005BAB;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
 }
 
 .subsection h4 {
@@ -518,7 +590,8 @@ footer {
 
 /* Adjust spacing between subsections */
 .subsection+.subsection {
-  margin-top: 0.75rem;  /* Reduced from 1rem */
+  margin-top: 0.75rem;
+  /* Reduced from 1rem */
 }
 
 /* Make subsections more compact on mobile */
