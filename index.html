@@ -13,15 +13,17 @@
     <div class="nu-header-content">
       <img src="assets/logos/Nile_University_Logo.jpg" alt="Nile University Logo" class="nu-logo">
       <span class="nu-title">Quantum Computing Summer School</span>
-      <nav>
 
-        <a href="index.html">Home</a>
+      <button class="menu-toggle" aria-label="Toggle Menu">☰</button>
+
+      <nav>
+        <a href="index.html" class="nu-home-btn">Home</a>
         <a href="#schedule">Calendar</a>
         <a href="#resources">Additional Resources</a>
-
       </nav>
     </div>
   </header>
+
 
   <main class="container">
     <h1>NU Quantum Computing Summer School</h1>
@@ -48,7 +50,7 @@
           <tr>
             <td>Sun, Aug 3</td>
             <td>Day 1</td>
-            <td>Intro to Quantum Mechanics & Computing (Part I)</td>
+            <td><a href="#day-1">Intro to Quantum Mechanics & Computing (Part I)</a></td>
             <td>Prof. Ahmed El Mahdy</td>
             <td>TA.Ahmed Gamal<br>TA.Mohamed Murad</td>
             <td>09:00–10:00: VIP Reception and Keynote Talks<br>10:00–10:30: Coffee Break<br>10:30–12:00: Two-Slit
@@ -59,7 +61,7 @@
           <tr>
             <td>Mon, Aug 4</td>
             <td>Day 2</td>
-            <td>Intro to Quantum Mechanics & Computing (Part II)</td>
+            <td><a href="#day-2">Intro to Quantum Mechanics & Computing (Part II)</a></td>
             <td>Prof. Ahmed El Mahdy</td>
             <td>TA.Ahmed Gamal<br>TA.Mohamed Murad</td>
             <td>09:00–10:30: Wave Equation<br>11:00–12:30: Quantum Systems Composition<br>13:30–15:30: Pennylane Lab
@@ -69,7 +71,7 @@
           <tr>
             <td>Tue, Aug 5</td>
             <td>Day 3</td>
-            <td>Quantum Systems</td>
+            <td><a href="#day-3">Quantum Systems</a></td>
             <td>Prof. Ahmed El Mahdy<br>Prof. Tamer Abouelfadl<br>Prof. Salem Farag Hegazy</td>
             <td>TA.Ahmed Gamal<br>Eng.Muhammad Hosam</td>
             <td>09:00–10:30: Photonic Quantum Computing<br>11:00–12:30: Superconducting Quantum
@@ -80,7 +82,7 @@
           <tr>
             <td>Wed, Aug 6</td>
             <td>Day 4</td>
-            <td>Quantum Noise</td>
+            <td><a href="#day-4">Quantum Noise</a></td>
             <td>Prof. Ahmed El Mahdy<br>Dr. Norhan Elsayed</td>
             <td>TA.Ahmed Gamal<br>TA.Mohamed Murad</td>
             <td>09:00–10:30: Quantum Noise Theory<br>11:00–12:30: Fault-Tolerant QC<br>13:30–15:30: Pennylane with Noise
@@ -90,7 +92,7 @@
           <tr>
             <td>Sun, Aug 10</td>
             <td>Day 5</td>
-            <td>Machine Learning</td>
+            <td><a href="#day-5">Machine Learning</a></td>
             <td>Dr. Ghada Khoriba<br>Dr. Noha Gamal</td>
             <td>TA.Lamiaa Omar<br>TA.Nora Kasiem<br>TA.Al-Amir Hassan</td>
             <td>09:00–10:30: ML Foundations 1<br>11:00–12:30: ML Foundations 2<br>13:30–15:30: ML Lab</td>
@@ -99,7 +101,7 @@
           <tr>
             <td>Mon, Aug 11</td>
             <td>Day 6</td>
-            <td>Quantum Machine Learning</td>
+            <td><a href="#day-6">Quantum Machine Learning</a></td>
             <td>Prof. Ahmed El Mahdy<br>Dr. Marwa Aref Sorour</td>
             <td>TA.Ahmed Gamal</td>
             <td>09:00–10:30: Variational Circuits 1<br>11:00–12:30: Variational Circuits 2<br>13:30–15:30: Pennylane Lab
@@ -109,7 +111,7 @@
           <tr>
             <td>Tue, Aug 12</td>
             <td>Day 7</td>
-            <td>Advanced QML</td>
+            <td><a href="#day-7">Advanced QML</a></td>
             <td>Prof. Ahmed El Mahdy<br>Prof. Walid Gomaa<br>(Japanese Univ.)</td>
             <td>TA.Ahmed Gamal<br>TA.Mohamed Murad</td>
             <td>09:00–10:30: QML Challenges 1<br>11:00–12:30: QML Challenges 2<br>13:30–15:30: Pennylane Lab</td>
@@ -118,7 +120,7 @@
           <tr>
             <td>Wed, Aug 13</td>
             <td>Day 8</td>
-            <td>PM2.5 Estimation from Satellite</td>
+            <td><a href="#day-8">PM2.5 Estimation from Satellite</a></td>
             <td>Dr. Noha Gamal</td>
             <td>TBD</td>
             <td>09:00–10:30: Satellite Imaging<br>11:00–13:00: Data Acquisition Lab<br>14:00–16:30: Competition Problem
@@ -157,6 +159,15 @@
             <div class="material-list-group">
               <a href="lectures/day1/The Two Slit Experiment-Circuits.pdf" class="material-link slides">
                 <span class="icon">📑</span> Two-Slit Experiment / Quantum Circuits Model
+              </a>
+            </div>
+            <div class="material-list-group">
+              <a href="https://phet.colorado.edu/sims/cheerpj/quantum-wave-interference/latest/quantum-wave-interference.html" class="material-link extra">
+                <span class="icon">💻</span> Quantum Wave Interference Simulation
+              </a>
+
+              <a href="" class="material-link extra">
+                <span class="icon">💻</span> Quantum Double-Slit Experiment Simulation
               </a>
             </div>
             <div class="material-list-group">
@@ -297,6 +308,11 @@
                 <span class="icon">📓</span> Quantum Optics Notebook
               </a>
             </div>
+            <div class="material-list-group">
+              <a href="https://lab.quantumflytrap.com/lab?mode=waves" class="material-link extra">
+                <span class="icon">💻</span> Quantum Flytrap Website
+              </a>
+            </div>
           </div>
           <div class="subsection">
             <h4>Superconductors Lab</h4>
@@ -304,7 +320,7 @@
               <a href="labs/day3/SCQubits_Lab.ipynb" class="material-link slides">
                 <span class="icon">📓</span> Superconducters Notebook
               </a>
-              <a href="labs/day3/Example full chip design.ipynb" class="material-link extra">
+              <a href="labs/day3/Example full chip design.ipynb" class="material-link slides">
                 <span class="icon">📓</span> Full superconducter chip design
               </a>
             </div>
@@ -607,7 +623,7 @@
 
     <section id="resources">
       <h2>Additional Resources</h2>
-      <div class="resource-grid">
+      <!-- <div class="resource-grid">
         <div class="resource-category">
           <h3>Essential Reading</h3>
           <ul class="resource-list">
@@ -622,7 +638,7 @@
             <li><a href="#"><span class="icon">💻</span> Online Quantum Simulator</a></li>
           </ul>
         </div>
-      </div>
+      </div> -->
     </section>
 
   </main>
