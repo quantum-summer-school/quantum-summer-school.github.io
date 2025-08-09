@@ -1,48 +1,31 @@
-# NU Quantum Competition - Lab Environment Setup
+# NU Quantum Computing Summer School
 
-This repository contains the guide and necessary scripts to configure the required programming environment for the NU Quantum Competition.
+This repository contains the source code for the official webpage of the Nile University Quantum Computing Summer School. The webpage serves as a central hub for students, providing access to the course schedule, lecture materials, lab resources, and important announcements.
 
-The primary guide is the `index.html` file. Follow the steps below to get started.
+## 🚀 Features
 
----
+* **Detailed Course Schedule**: A comprehensive, mobile-friendly table outlining the topics, speakers, and activities for each day of the summer school.
+* **Centralized Course Materials**: Each day's section includes organized links to lecture slides, video recordings, and lab notebooks, making it easy for students to follow along.
+* **Meet the Team**: A dedicated section introducing the distinguished faculty, event managers, and technical teams behind the summer school and competition.
+* **Additional Resources**: A curated list of essential readings and software tools to support the learning experience.
+* **Responsive Design**: The layout is fully responsive, ensuring a seamless experience on both desktop and mobile devices.
 
-## Instructions
+## 📂 Project Structure
 
-### 1. Download the Repository
+The project is organized into the following files and directories:
 
-First, download the project files to your local machine.
+* `index.html`: The main HTML file that contains the structure and content of the webpage.
+* `style.css`: The stylesheet that defines the visual presentation, including layout, colors, and typography.
+* `assets/`: A directory containing images and logos used on the site.
+* `lectures/`: A directory that holds all lecture-related materials, such as slide decks and PDFs.
+* `labs/`: A directory containing all laboratory materials, including Jupyter notebooks and datasets.
 
-**Option A: Clone with Git (Recommended)**
+## 📖 Content Overview
 
-Open your terminal or command prompt and run the following command:
-```bash
-git clone https://github.com/jamal022/nu-quantum-competition-lab-setup.git
-```
+The summer school curriculum is designed to provide a thorough introduction to quantum computing and its applications in machine learning. Key topics include:
 
-**Option B: Download ZIP**
-
-Click the green `<> Code` button on this repository's main page and select **Download ZIP**. Unzip the downloaded file on your computer.
-
-### 2. Open the Setup Guide
-
-Navigate into the project folder from your terminal:
-```bash
-cd nu-quantum-competition-lab-setup
-```
-
-> **Your next step is to open the `index.html` file in a web browser** (such as Chrome, Firefox, or Safari).
-
-This file is the primary setup guide. All further instructions, download links, and troubleshooting steps are detailed within it. Please follow the guide carefully to complete your environment setup.
-
----
-
-## Repository Contents
-
-*   `index.html`: **The main, interactive setup guide. This is your starting point.**
-*   `/scripts/`: This folder contains the automated environment setup scripts referenced in the guide.
-    *   `create_env_windows.bat`: The setup script for Windows users.
-    *   `create_env_linux.sh`: The setup script for Linux & macOS users.
-
-## Support
-
-For any issues during the setup, please refer to the "Troubleshooting" section within the `index.html` guide or contact the designated technical support team.
+* **Days 1-2**: Fundamentals of Quantum Mechanics and Quantum Computing, including the two-slit experiment and the quantum circuit model.
+* **Day 3**: A deep dive into different **Quantum Systems**, such as Photonic and Superconducting quantum computing.
+* **Day 4**: Understanding and mitigating **Quantum Noise** and an introduction to Fault-Tolerant Quantum Computing.
+* **Days 5-7**: A comprehensive module on **Machine Learning** and **Quantum Machine Learning (QML)**, covering foundational concepts and advanced topics like variational circuits.
+* **Day 8**: A practical challenge on **PM2.5 Estimation from Satellite** imagery, culminating in a competition.
